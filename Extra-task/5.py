@@ -7,16 +7,15 @@ def reverse(s):
       str = i + str
   return str
 
-def vowels(str):
-    str1=""
-    vowels=set('aeiou')
-    for char in str:
-        if char in vowels:
-            str1.add(char)
-    return str1        
-
-
+def vowels(string):
+    chars=list(string)
    
+    size=len(string)
+    vowels=[]
+    for i in range(len(string)):
+        if chars[i] in ['a','e','i','o','u']:
+            vowels.append(chars[i])
+    print(vowels)       
 
 
 s = "HelloWorld How are you?"
@@ -27,5 +26,7 @@ print (s)
 print ("The reversed string is : ",end="")
 print (reverse(s))
 
+rev_string=reverse(s)
+
 print ("The reversed string with vowels is : ",end="")
-print (vowels(str))
+print (vowels(rev_string))
